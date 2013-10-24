@@ -43,10 +43,6 @@
 		
 		<p><a href="cars.php" class="btn btn-primary btn-sm col-md-offset-1">Reset Colour</a></p>
 	</div>
-	<?php
-		$colour = $_GET['colour'];
-		echo $colour;
-	?>
 	<!-- /part 2 code -->
 	
 	
@@ -72,16 +68,24 @@
 			$cars[] = $carObj;
 		}
 		
+		$colour;
+		if (!array_key_exists('colour', $_GET)) {
+			$colour = 'any';
+		} else {
+			$colour = $_GET['colour'];
+		}
+		
 		foreach ($cars as $car) {
-			echo "<div class=\"car-advert\">";
-
-			echo "<h3>{$car->getMake()} - {$car->getModel()}</h3>";
-			echo "<p>{$car->getDescription()} </p>";
-			echo "<p>Colour: {$car->getColour()} </p>";
-			echo "<p>Age: {$car->getAge()} </p>";
-			echo "<p>Reg: {$car->getRegNumber()} </p>";
-			echo "<h4>£{$car->getPrice()} </h4>";
-			echo "</div>";
+			if ($car->getColour() == $colour || $colour == 'any') {
+				echo "<div class=\"car-advert\">";
+				echo "<h3>{$car->getMake()} - {$car->getModel()}</h3>";
+				echo "<p>{$car->getDescription()} </p>";
+				echo "<p>Colour: {$car->getColour()} </p>";
+				echo "<p>Age: {$car->getAge()} </p>";
+				echo "<p>Reg: {$car->getRegNumber()} </p>";
+				echo "<h4>£{$car->getPrice()} </h4>";
+				echo "</div>";
+			}
 		}
 	?>
 		
