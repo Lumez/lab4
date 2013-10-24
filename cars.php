@@ -25,11 +25,6 @@
 	
 	<p>View our wide range of fabulous cars and low low prices, and quality. Ensure your car is only sold by a Boyd approved dealership.</p>
 	
-	<?php 
-		include('data/carData.php'); 
-		print_r($carData);
-	?>
-	
 	<!-- DO NOT USE THIS UNTIL PART 2 -->
 	<!-- when told to, remove these comments -->
 	<!--
@@ -56,9 +51,10 @@
 	<!-- car list -->
 	<div id="car-list" class="row">
 		
-		<!-- =========================== -->
-		<!-- PART 1 CAR LIST PLACEHOLDER -->
-		<!-- =========================== -->
+	<?php 
+		include('data/carData.php'); 
+		print_r($carData);
+	?>
 		
 	</div><!-- /car list -->
 	
