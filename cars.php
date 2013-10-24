@@ -53,7 +53,21 @@
 		
 	<?php 
 		include('data/carData.php'); 
-		print_r($carData);
+		include('classes/car.class.php'); 
+		
+		$cars = array();
+		
+		foreach ($carData as $car) {
+			$carObj = new Car(
+				$car['make'], 
+				$car['model'], 
+				$car['colour'], 
+				$car['description'], 
+				$car['price'],
+				$car['reg_number'],
+				$car['reg_year']);
+			$cars[] = $carObj;
+		}
 	?>
 		
 	</div><!-- /car list -->
