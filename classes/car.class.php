@@ -18,4 +18,32 @@ class Car
 		$this->reg_number = $reg_number;
 		$this->reg_year = $reg_year;
 	}
+	
+	function getMake() {
+		return $this->make;
+	}
+	
+	function getModel() {
+		return $this->model;
+	}
+	
+	function getColour() {
+		return $this->colour;
+	}
+	
+	function getDescription() {
+		return $this->description;
+	}
+	
+	function getPrice() {
+		return $this->price;
+	}
+	
+	function getRegNumber() {
+		return $this->reg_number;
+	}
+	
+	function getRegYear() {
+		return $this->reg_year;
+	}
 }

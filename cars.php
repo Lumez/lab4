@@ -66,7 +66,20 @@
 				$car['price'],
 				$car['reg_number'],
 				$car['reg_year']);
+				
 			$cars[] = $carObj;
+		}
+		
+		foreach ($cars as $car) {
+			echo "<div class=\"car-advert\">";
+
+			echo "<h3>{$car->getMake()} - {$car->getModel()}</h3>";
+			echo "<p>{$car->getDescription()} </p>";
+			echo "<p>Colour: {$car->getColour()} </p>";
+			echo "<p>Year: {$car->getRegYear()} </p>";
+			echo "<p>Reg: {$car->getRegNumber()} </p>";
+			echo "<h4>£{$car->getPrice()} </h4>";
+			echo "</div>";
 		}
 	?>
 		
