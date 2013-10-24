@@ -76,7 +76,7 @@
 			echo "<h3>{$car->getMake()} - {$car->getModel()}</h3>";
 			echo "<p>{$car->getDescription()} </p>";
 			echo "<p>Colour: {$car->getColour()} </p>";
-			echo "<p>Year: {$car->getRegYear()} </p>";
+			echo "<p>Age: {$car->getAge()} </p>";
 			echo "<p>Reg: {$car->getRegNumber()} </p>";
 			echo "<h4>£{$car->getPrice()} </h4>";
 			echo "</div>";

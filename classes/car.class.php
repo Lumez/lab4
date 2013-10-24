@@ -46,4 +46,17 @@ class Car
 	function getRegYear() {
 		return $this->reg_year;
 	}
+	
+	/**
+	 * Gets the age of the car
+	 *
+	 * Calculates the age of the car using the current date and the
+	 * registration year, and returns it.
+	 *
+	 * @return	int 	age of the car
+	 */
+	function getAge() {
+		$age = intval(date('Y')) - $this->reg_year;
+		return $age;
+	}
 }
