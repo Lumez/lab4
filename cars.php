@@ -27,7 +27,6 @@
 	
 	<!-- DO NOT USE THIS UNTIL PART 2 -->
 	<!-- when told to, remove these comments -->
-	<!--
 	<div class="row">
 		<p class="col-md-2">Car Colour</p>
 		<form action="cars.php" method="GET">
@@ -44,7 +43,10 @@
 		
 		<p><a href="cars.php" class="btn btn-primary btn-sm col-md-offset-1">Reset Colour</a></p>
 	</div>
-	-->
+	<?php
+		$colour = $_GET['colour'];
+		echo $colour;
+	?>
 	<!-- /part 2 code -->
 	
 	
